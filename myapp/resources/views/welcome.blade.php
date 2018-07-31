@@ -83,11 +83,10 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <form class="" action="{{URL::to('/signup')}}" methode="post">
+                    <div links="links">
+                    Sign up or Sign in
+                </div>
                 </div>
             </div>
         </div>
