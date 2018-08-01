@@ -15,7 +15,7 @@ class CreateImmeublesTable extends Migration
     {
         Schema::create('immeubles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nom');
+            $table->string('nom')->index();
             $table->string('code_im');
             $table->timestamps();
         });
