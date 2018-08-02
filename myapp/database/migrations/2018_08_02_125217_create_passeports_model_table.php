@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class DeleteNameInPasseportTable extends Migration
+class CreatePasseportsModelTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class DeleteNameInPasseportTable extends Migration
      */
     public function up()
     {
-        Schema::table('passeports', function (Blueprint $table) {
-            $table->dropColumn('nom');
+        Schema::create('passeports', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('age');
+            $table->string('sexe');
+            $table->string('user_id');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ class DeleteNameInPasseportTable extends Migration
      */
     public function down()
     {
-        Schema::table('passeports', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('passeports_model');
     }
 }

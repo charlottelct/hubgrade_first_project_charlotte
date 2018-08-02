@@ -10,10 +10,9 @@ class PasseportController extends Controller
     public function add(Request $request) 
     {
         $passeport = new Passeport;
-        $passeport->nom = $request->nom;
         $passeport->age = $request->age;
         $passeport->sexe = $request->sexe;
-        $passeport->taille = $request->taille;
+        $passeport->user_id = $request->user_id;
         $passeport->save();
         return $passeport;
     }

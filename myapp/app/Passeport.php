@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Passeport extends Model
 {
-    protected $fillable = ['nom', 'age', 'sexe', 'taille'];
+    protected $fillable = ['age', 'sexe', 'user_id'];
+    protected $table = 'passeports';
 }

@@ -14,6 +14,9 @@ Use App\Article;
 */
 
 Route::post('immeuble', 'ImmeubleController@add');
-Route::post('passeport', 'PasseportController@add');
-Route::put('passeport', 'PasseportController@update');
-Route::delete('passeport', 'PasseportController@delete');
+Route::post('passeports', 'PasseportController@add');
+Route::put('passeports', 'PasseportController@update');
+Route::delete('passeports', 'PasseportController@delete');Route::post('immeuble', 'ImmeubleController@add');
+Route::post('users', 'UserController@add');
+Route::put('users', 'UserController@update');
+Route::delete('users', 'UserController@delete');

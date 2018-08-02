@@ -120,8 +120,7 @@ return [
     */
 
     'providers' => [
-
-
+ 
         /*
          * Laravel Framework Service Providers...
          */
@@ -151,6 +150,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
 
         /*
          * Application Service Providers...
