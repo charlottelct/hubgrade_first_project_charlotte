@@ -18,12 +18,12 @@ Route::post('logout', 'AuthController@logout');
 Route::post('refresh', 'AuthController@refresh');
 Route::post('me', 'AuthController@me');
 
-Route::post('immeuble', 'ImmeubleController@add');
-Route::post('passeports', 'PasseportController@add');
-Route::put('passeports', 'PasseportController@update');
-Route::delete('passeports', 'PasseportController@delete');
-Route::post('immeuble', 'ImmeubleController@add');
-
+Route::post('immeubles', 'ImmeubleController@add');
+Route::put('immeubles', 'ImmeubleController@update');
+Route::delete('users', 'ImmeubleController@delete');
 Route::post('users', 'UserController@add');
 Route::put('users', 'UserController@update');
 Route::delete('users', 'UserController@delete');
+Route::post('comptes', 'ComptesController@add');
+Route::put('comptes', 'ComptesController@update');
+Route::delete('comptes', 'ComptesController@delete');

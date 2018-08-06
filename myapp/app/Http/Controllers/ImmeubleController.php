@@ -10,9 +10,23 @@ class ImmeubleController extends Controller
     public function add(Request $request)
     {
         $immeuble = new Immeuble;
-        $immeuble->nom = $request->nom;
-        $immeuble->code_im = $request->code_Imm;
+        $immeuble->name = $request->name;
         $immeuble->save();
         return $immeuble;    
+    }
+
+    public function update(Request $request)
+    {
+        $immeuble = Immeuble::find(1);
+        $immeuble->name = $request->name;
+        $immeuble->save();
+        return $immeuble;
+    }
+
+    public function delete(Request $request)
+    {
+        $immeuble = Immeuble::find(1);
+        $immeuble->delete();
+        return $immeuble;
     }
 }
